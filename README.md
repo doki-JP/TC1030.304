@@ -8,7 +8,8 @@ Decidí realizar este proyecto debido a que considero que mi creatividad se limi
 
 # Funcionalidad
 El programa es capaz de Mostrar los videos; películas o series con su respectiva calificación, así como su ID de video.
-Debe tener algún tipo de menú debido a que si se quiere buscar un pedazo de contenido debemos conocer qué contenido se busca
+Debe tener algún tipo de menú debido a que si se quiere buscar un pedazo de contenido debemos conocer qué contenido se busca.
+Tomando como apoyo el UML; la clase video, siendo la general, hereda sus métodos hacia las clases 'Serie' y 'Pelicula', siendo clases más específicas. Al mismo tiempo, la clase Episodio tiene una relación de composición con la clase Serie, sin serie no existen capítulos, y al haber una relación de composición los métodos de 'Capitulos' son accesibles para Serie. Para finalizar, gracias a la primera herencia podemos utilizar los métodos de busqueda para proporcionar con los datos necesarios al usuario.
 
 # Consideraciones
 El programa está hecho en c++ y debería correr en todos los sistemas operativos. Los siguientes comandos están orientados a Windows 11:
