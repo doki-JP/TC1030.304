@@ -1,4 +1,4 @@
-# TC1030.304
+# TC1030.304 - Juan Pablo Chávez Leal - A01705408
 Programación orientada a objetos
 
 En este proyecto se solucionará la situación problema ya establecida en el curso, en donde se solucionen los varios inscisos como: Mostrar los videos dentro de una plataforma, es decir, episodios y películas con sus respectivas calificaciones, asimismo implementar el ID de cada video en el catálogo de Netflix, además de otros factores a considerar.
