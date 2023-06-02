@@ -9,9 +9,10 @@ using namespace std;
 class Serie: public Video{
     private:
     Episodio capitulo;
+    string series[100];
 
     public:
-    string series[100];
+    Serie();
     Serie(string Tit, string gnro, string identi, float estrellas):Video(Tit, gnro,identi){
 
     }
