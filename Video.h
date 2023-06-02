@@ -11,9 +11,11 @@ class Video{
         float duracion_minutos;
         float rating;
     public:
+        Video();
         Video(string Tit, string gnro, string identi);
         Video(string Tit, string gnro, string identi, float estrellas,float drcnmin);
-        string BuscarContenido(string){};
+        virtual void AgregaContenido(string){};
+        string BuscarContenido(string ID){};
         float ObtenerRating(){return rating;};
         string MostrarVideos(){};
         void AñadirRating(float estrellas){};
@@ -33,6 +35,11 @@ Video::Video(string Tit, string gnro, string identi, float estrellas, float dura
     ID=identi;
     rating=estrellas;
     duracion_minutos=duracnmin;
+}
+Video::Video(){
+    titulo= "";
+    genero="";
+    ID="";
 }
 
 
