@@ -1,6 +1,9 @@
 #include "Video.h"
 #include <iostream>
 int main(){
-    string Video *prtS =new Serie();
-    string Video *ptrP = new Pelicula();
+    Video *prtS =new Serie("Neon Genesis Evangelion","Accion y Mecha",169,4.25,"S1669",1,26);
+    Video *ptrP = new Pelicula();
+    ptrP->MostrarVideos();
+    delete(prtS);
+    delete(ptrP);
 }
