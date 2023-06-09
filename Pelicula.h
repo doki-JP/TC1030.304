@@ -6,12 +6,14 @@
 #include <iostream>
 using namespace std;
 class Pelicula : public Video{
-    private:
-    string Peliculas[];
     public:
-    void AgregaContenido(string);
+    Pelicula(string tit,string gen,float drcn,float rating, string id):Video(tit,gen,drcn,rating,id){};
+    void MostrarVideos();
 };
-void Pelicula::AgregaContenido(string){
-    
+void Pelicula::MostrarVideos(){
+    cout<<"Titulo: "<<titulo<<"\n";
+    cout<<"Genero: "<<genero<<"\n";
+    cout<<"Rating: "<<rating<<"\n";
+    cout<<"Duración en minutos: "<<duracion_minutos<<"\n";
 }
 #endif
