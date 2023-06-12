@@ -1,8 +1,6 @@
 #ifndef VIDEO_H
 #define VIDEO_H
 #include "Episodio.h"
-#include <iostream>
-
 class Video {
 protected:
     string genero;
@@ -43,6 +41,8 @@ void Pelicula::MostrarVideos() {
     cout << "Genero: " << genero << "\n";
     cout << "Rating: " << rating << "\n";
     cout << "Duracion en minutos: " << duracion_minutos << "\n";
+    cout<<"Tiene el ID: "<<ID<<"\n\n";
+    
 }
 class Serie : public Video {
 protected:
@@ -53,7 +53,15 @@ public:
     Serie(string, string, float, float, string, int, int);
     void MostrarVideos() override;
     void MostrarCapSerie(string);
+    void setCap(int,string,int,float);
+    int getNumCap(){return numC;};
+
 };
+
+void Serie::setCap(int epi,string tit,int temp, float rat){
+    Episodio capi(epi,tit,temp,rat);
+    cap[epi]=capi;
+}
 Serie::Serie(string Tit, string gnro, float drcnmin, float estrellas, string identi, int temp, int capi)
     : Video(Tit, gnro, drcnmin, estrellas, identi) {
     numC = capi;
@@ -62,15 +70,17 @@ Serie::Serie(string Tit, string gnro, float drcnmin, float estrellas, string ide
 void Serie::MostrarVideos() {
     cout << "Titulo: " << titulo << "\n";
     cout << "Genero: " << genero << "\n";
-    cout << "Rating: " << rating << "\n";
+    cout << "Rating: " << rating << " estrellas\n";
     cout << "Duracion en minutos: " << duracion_minutos << "\n";
+    cout<<"Tiene el ID: "<<ID<<"\n\n";
 }
 
 void Serie::MostrarCapSerie(string nom) {
     cout << "Los capitulos de la serie son:\n";
-    for (int i = 0; i < numC; i++) {
+    for (int i = 1; i <= numC; i++) {
         cap[i].MostrarDatosCap();
         cout << "\n";
     }
 }
+
 #endif
