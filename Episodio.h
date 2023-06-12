@@ -3,26 +3,32 @@
 #include <iostream>
 using namespace std;
 
-class Episodio{
-    private:
-    string NumCapitulos;
-    string NumTemporadas;
+class Episodio {
+private:
+    string NumTemporada;
     string Titulo;
+    int rating;
 
-    public:
-    void AñadirCap(int cap);
-    void AñadirTemp(int temp);
-    void AñadirTitulo(string titu);
-    string ObtenerTempCap(){return NumTemporadas,NumCapitulos;}
-    string ObtenerTitulo(){return Titulo;}
+public:
+    Episodio();
+    Episodio(string, string, int);
+    void MostrarDatosCap();
 };
-void Episodio::AñadirCap(int cap){
-    NumCapitulos=cap;
+Episodio::Episodio() {
+    Titulo = "NA";
+    NumTemporada = "-1";
+    rating = 0;
 }
-void Episodio::AñadirTemp(int temp){
-    NumTemporadas=temp;
+
+Episodio::Episodio(string tit, string temp, int rat) {
+    Titulo = tit;
+    NumTemporada = temp;
+    rating = rat;
 }
-void Episodio::AñadirTitulo(string titu){
-    Titulo=titu;
+
+void Episodio::MostrarDatosCap() {
+    cout << "El episodio titulado: " << Titulo << "\n";
+    cout << "Tiene un rating de: " << rating << " estrellas\n";
+    cout << "Y pertenece a la temporada: " << NumTemporada << "\n";
 }
 #endif
