@@ -12,13 +12,8 @@ protected:
 public:
     Video(string, string, float, float, string);
     string BuscarContenido(string);
-    float ObtenerRating() { return rating; }
     virtual void MostrarVideos() = 0;
-    void setRating(float estrellas) { rating = estrellas; }
-    string getGenero() { return genero; }
-    string getTitulo() { return titulo; }
-    void setTitulo(string tit) { titulo = tit; }
-    void setGenero(string gnro) { genero = gnro; }
+    string getTitulo() { return titulo; }  
 };
 Video::Video(string Tit, string gnro, float drcnmin, float estrellas, string identi) {
     titulo = Tit;
@@ -26,6 +21,16 @@ Video::Video(string Tit, string gnro, float drcnmin, float estrellas, string ide
     ID = identi;
     rating = estrellas;
     duracion_minutos = drcnmin;
+}
+string Video::BuscarContenido(string name){
+    if (name==titulo){
+        cout<<"Se encontro el titulo\n";
+        cout << "Titulo: " << titulo << "\n";
+        cout << "Genero: " << genero << "\n";
+        cout << "Rating: " << rating << "\n";
+        cout << "Duracion en minutos: " << duracion_minutos << "\n";
+        cout<<"Tiene el ID: "<<ID<<"\n\n";
+    }
 }
 
 class Pelicula : public Video {
@@ -52,7 +57,7 @@ protected:
 public:
     Serie(string, string, float, float, string, int, int);
     void MostrarVideos() override;
-    void MostrarCapSerie(string);
+    void MostrarCapSerie();
     void setCap(int,string,int,float);
     int getNumCap(){return numC;};
 
@@ -75,7 +80,7 @@ void Serie::MostrarVideos() {
     cout<<"Tiene el ID: "<<ID<<"\n\n";
 }
 
-void Serie::MostrarCapSerie(string nom) {
+void Serie::MostrarCapSerie() {
     cout << "Los capitulos de la serie son:\n";
     for (int i = 1; i <= numC; i++) {
         cap[i].MostrarDatosCap();
