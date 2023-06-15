@@ -53,7 +53,7 @@ int main(){
 
         //Inicio de la interfaz de interacción
     while (seleccion=="y"||seleccion=="Y"){
-        cout<<"Seleccione uno de las opciones:\n\t1. Aniadir Pelicula\n\t2. Aniadir Serie\n\t3. Mostrar capitulos de una serie\n\t4. Buscar contenido a base de nombre\n\t5.Mostrar todo el catalogo\n ";
+        cout<<"Seleccione uno de las opciones:\n\t1. Aniadir Pelicula\n\t2. Aniadir Serie\n\t3. Mostrar capitulos de una serie\n\t4. Buscar contenido a base de nombre\n\t5. Mostrar todo el catalogo\n ";
         cin>>menu;
         if (menu==1){
             cout<<"Ingrese el titulo de la pelicula: ";
@@ -64,7 +64,7 @@ int main(){
             cin>>gen;
             cout<<"Introduzca la duracion en minutos de la obra: ";
             cin>>min;
-            cout<<"Introduzca el rating de la obra: ";
+            cout<<"Introduzca el rating, en escala del 1 al 5, de la obra: ";
             cin>>rati;
             cout<<"Introduzca el ID de la pelicula: ";
             cin>>id;
@@ -97,8 +97,6 @@ int main(){
                     cout<<"Ingrese el titulo del episodio: ";
                     cin.ignore();
                     getline(cin,nom);
-                    //cout<<"Ingrese la temporada a la que pertenece: ";
-                    //cin>>tempo;
                     cout<<"Ingrese el rating del episodio: ";
                     cin>>rati;
                     ((Serie*)ptr[contVid])->setCap(i+1,nom,tempo,rati);
@@ -117,7 +115,7 @@ int main(){
             for (int i=0;i<contVid;i++){
                 aux=ptr[i]->getTitulo();
                 if (nom==aux){
-                    cout<<"Serie encontrada: "<<aux;
+                    cout<<"Serie encontrada: "<<aux<<endl;
                     ((Serie *)ptr[i])->MostrarCapSerie();
                 }
             }
