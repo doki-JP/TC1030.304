@@ -27,5 +27,3 @@ Una consideración importante es que el programa es muy sensible a la entrada de
 - Al terminar, el menú principal enseña un aviso acerca de la ejecución, se pueden utilizar mayúsculas o minúsculas, si se inserta otro valor se tomará como negativo y el código no se repetirá
 - Se reemplazó la "Ñ" por "ni", por ejemlo, año=anio, añade=aniade y niño=ninio. Favor de usar este reemplazo al insertar las opciones, no generá ningún tipo de error, pero puede distorsionar algunos caracteres.
 - Si se busca una serie a la que no se le añadió capitulos, se leerá "Los capitulos de la serie son: ", significa que no tiene ningún capitulo registrado.
-- 
-- 
