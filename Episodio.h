@@ -1,3 +1,12 @@
+/*
+    Proyecto Situación problema
+    Juan Pablo Chávez Leal
+    a01705408
+    14/06/23
+    Esta clase tiene una relación de polimorfismo hacia Serie, ya que si no existiera la clase serie, no debería existir la clase Episodio, esta clase
+    hace mucho más sencilla la parte de mostrar cada capitulo, ya que podemos asignar un objeto por capítulo, es por eso que me planteé usar una lista 
+    para la clase Serie. 
+*/
 #ifndef EPISODIO_H
 #define EPISODIO_H
 #include <iostream>
