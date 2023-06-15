@@ -1,0 +1,22 @@
+Correcciones
+Genero un diagrama de clases UML correcto y y explico su relación con el problema de forma clara
+- Al actualizar el UML, utilice la retroalimentación que me proporcionaron para generar uno nuevo, 
+enfasis en que hice un arreglo de capitulos en ves de solo una variable de tipo Episodio.
+
+Se implementa de manera correcta los modificadores de acceso
+- Mi error radicó en que no aporveche de una manera adecuada la herencia, 
+cambié lo inconveniente que es "private:" a un "protected" que facilita las cosas en las interacciones de las diferentes clases.
+
+Se implementa de manera correcta la sobrecarga y sobreescritura de métodos
+- No existía, para enmendarlo utilicé la sobrecarga de constructores como método para poder generar mejores constructores,
+además de que el constructor video hereda algunos parametros y se utiliza sobreescritura para completar el constructor Serie.
+
+Se implementa de manera correcta el concepto de Polimorfismo
+- No entregue el avance, en el main se crea un array de objetos de diferentes tipos, 
+además de que se utilizan métodos abstractos para poder definirse entre diferentes clases,
+así simplificando el proceso.
+
+Se implementa de manera correcta el concepto de Clases Abstractas
+- El código no corrió, pero se implementó el método MostrarVideos() que es virtual y se igualó a 0, 
+creando la clase abstracta y que funciona apoyando al polimorfismo.
+
